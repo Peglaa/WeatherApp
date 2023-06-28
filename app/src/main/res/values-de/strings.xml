@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="my_location_icon">Standortsymbol</string>
+    <string name="share_current_location">Teilen Sie den aktuellen Standort</string>
+    <string name="search_locations">Standorte suchen</string>
+    <string name="no_saved_location_text">Keine gespeicherten Orte</string>
+    <string name="location_necessary_text">Um lokale Wetterdaten zu erhalten, benötigen wir Zugriff auf den Standort Ihres Geräts.</string>
+    <string name="try_again">Wiederholen</string>
+    <string name="check_location_permission">Stellen Sie sicher, dass auf Ihrem Gerät die Standortbestimmung aktiviert ist!</string>
+    <string name="check_internet_connection">Prüfe deine Internetverbindung</string>
+    <string name="cant_find_you">Wir können Sie nicht finden &#128532;</string>
+    <string name="unexpected_error">Etwas Unerwartetes ist passiert &#128532;</string>
+    <string name="speed">Geschwindigkeit</string>
+    <string name="direction">Richtung</string>
+
+    <string name="humidity_tv">%d%%</string>
+    <string name="pressure_tv">%d hPa</string>
+    <string name="wind_tv">%d%s</string>
+    <string name="temp_tv">%d%s</string>
+    <string name="error_icon">Fehlersymbol</string>
+    <string name="no_location_icon">Symbol kein Standort</string>
+    <string name="today">Heute</string>
+    <string name="daily">Täglich</string>
+    <string name="settings">Einstellungen</string>
+    <string name="edit_location">Standort bearbeiten</string>
+    <string name="min_icon">Symbol für Mindesttemperatur</string>
+    <string name="max_icon">Symbol für maximale Temperatur</string>
+
+    <string name="tomorrow">Morgen</string>
+
+    <string name="weather_icon">Wettersymbol</string>
+
+    <string name="temperature">Temperatur</string>
+    <string name="min_daily">Mindestens täglich</string>
+    <string name="max_daily">Maximal täglich</string>
+    <string name="night_temp">Nachts</string>
+    <string name="evening_temp">Abend</string>
+    <string name="morning_temp">Morgen</string>
+    <string name="day_temp">Tag</string>
+    <string name="feels_like_temp">Fühlt sich an wie Temperatur</string>
+    <string name="sun">Sonne</string>
+    <string name="sunrise">Sonnenaufgang</string>
+    <string name="sundown">Sonnenuntergang</string>
+
+    <string name="north">Norden</string>
+    <string name="northeast">Nordost</string>
+    <string name="northwest">Nordwest</string>
+    <string name="west">Westen</string>
+    <string name="south">Süd</string>
+    <string name="east">Ost</string>
+    <string name="southwest">Südwesten</string>
+    <string name="southeast">Süd-Ost</string>
+    <string name="current_weather">Aktuelles Wetter</string>
+    <string name="pressure">Druck</string>
+    <string name="wind">Wind</string>
+    <string name="humidity">Feuchtigkeit</string>
+
+    <string name="unauthorized">Überprüfung fehlgeschlagen. Überprüfen Sie Ihren API-Schlüssel und Ihre Benutzerinformationen und versuchen Sie es dann erneut.</string>
+    <string name="unknown_error">Es gab einen Fehler. Versuchen Sie es nochmal.</string>
+    <string name="invalid_permission">Sie haben keinen Zugriff auf diese Daten. Überprüfen Sie Ihre Zugriffsebene und versuchen Sie es erneut.</string>
+    <string name="server_url_error">Serverfehler. Überprüfen Sie die URL und den Serverstatus und versuchen Sie es dann erneut.</string>
+
+    <string name="toolbar_title">%s - %s, %s</string>
+    <string name="settings_theme">Thema</string>
+    <string name="settings_light_theme">Licht</string>
+    <string name="settings_dark_theme">Dunkel</string>
+    <string name="settings_default_theme">Ursprünglich</string>
+    <string name="settings_language">Sprache</string>
+    <string name="settings_language_croatian">Kroatisch</string>
+    <string name="settings_language_english">Englisch</string>
+    <string name="settings_language_german">Deutsch</string>
+    <string name="settings_units">Einheiten</string>
+    <string name="settings_units_standard">Standard</string>
+    <string name="settings_units_imperial">Imperiale</string>
+    <string name="settings_units_metric">Metrisch</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="num_of_days">Anzahl der Tage, die für das tägliche Wetter verwendet werden</string>
+</resources>

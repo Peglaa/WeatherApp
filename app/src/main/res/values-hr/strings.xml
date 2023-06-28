@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="my_location_icon">Location icon</string>
+    <string name="share_current_location">Podijeli trenutnu lokaciju</string>
+    <string name="search_locations">Pretraži lokacije</string>
+    <string name="no_saved_location_text">Nije pohranjena niti jedna lokacija</string>
+    <string name="location_necessary_text">Kako bi dobili podatke o vremenskim uvjetima za svoju lokaciju potrebna nam je vaša lokacija.</string>
+    <string name="try_again">Pokušaj ponovno</string>
+    <string name="check_location_permission">Provjeri ima li uređaj pristup lokaciji!</string>
+    <string name="check_internet_connection">Provjeri internetsku vezu!</string>
+    <string name="cant_find_you">Ne možemo te pronaći &#128532;</string>
+    <string name="unexpected_error">Nešto se neočekivano dogodilo &#128532;</string>
+    <string name="speed">Brzina</string>
+    <string name="direction">Smjer</string>
+
+    <string name="humidity_tv">%d%%</string>
+    <string name="pressure_tv">%d hPa</string>
+    <string name="wind_tv">%d%s</string>
+    <string name="temp_tv">%d%s</string>
+    <string name="error_icon">Error icon</string>
+    <string name="no_location_icon">No location icon</string>
+    <string name="today">Danas</string>
+    <string name="daily">Dnevno</string>
+    <string name="settings">Postavke</string>
+    <string name="edit_location">Edit location</string>
+    <string name="min_icon">Min temperature icon</string>
+    <string name="max_icon">Max temperature icon</string>
+
+    <string name="tomorrow">Sutra</string>
+
+    <string name="weather_icon">Weather icon</string>
+
+    <string name="temperature">Temperatura</string>
+    <string name="min_daily">Minimalna dnevna</string>
+    <string name="max_daily">Maksimalna dnevna</string>
+    <string name="night_temp">Noćna</string>
+    <string name="evening_temp">Večernja</string>
+    <string name="morning_temp">Jutarnja</string>
+    <string name="day_temp">Dnevna</string>
+    <string name="feels_like_temp">Stvarni osjećaj temperature</string>
+    <string name="sun">Sunce</string>
+    <string name="sunrise">Izlazak</string>
+    <string name="sundown">Zalazak</string>
+
+    <string name="north">Sjever</string>
+    <string name="northeast">Sjeveroistok</string>
+    <string name="northwest">Sjeverozapad</string>
+    <string name="west">Zapad</string>
+    <string name="south">Jug</string>
+    <string name="east">Istok</string>
+    <string name="southwest">Jugozapad</string>
+    <string name="southeast">Jugoistok</string>
+    <string name="current_weather">Current weather</string>
+    <string name="pressure">Tlak</string>
+    <string name="wind">Vjetar</string>
+    <string name="humidity">Vlažnost</string>
+
+    <string name="unauthorized">Verifikacija nije uspjela. Provjerite API ključ ili korisničke podatke i pokušajte ponovno.</string>
+    <string name="unknown_error">Dogodila se greška. Pokušajte ponovno.</string>
+    <string name="invalid_permission">Nemate pravo pristupa ovim podacima. Provjerite razinu pristupa i pokušajte ponovno.</string>
+    <string name="server_url_error">Greška servera. Provjerite URL i status servera i pokušajte ponovno.</string>
+
+    <string name="toolbar_title">%s - %s, %s</string>
+    <string name="settings_theme">Način prikaza</string>
+    <string name="settings_light_theme">Svijetlo</string>
+    <string name="settings_dark_theme">Tamno</string>
+    <string name="settings_default_theme">Zadano</string>
+    <string name="settings_language">Jezik</string>
+    <string name="settings_language_croatian">Hrvatski</string>
+    <string name="settings_language_english">Engleski</string>
+    <string name="settings_language_german">Njemački</string>
+    <string name="settings_units">Jedinice</string>
+    <string name="settings_units_standard">Standardne</string>
+    <string name="settings_units_imperial">Imperijalne</string>
+    <string name="settings_units_metric">Metričke</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="num_of_days">Broj dana za dnevni prikaz vremena</string>
+</resources>

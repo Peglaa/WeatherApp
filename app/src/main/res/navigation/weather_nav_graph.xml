@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_nav_graph"
+    app:startDestination="@id/locationCheckFragment">
+
+    <fragment
+        android:id="@+id/noLocationSavedFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.no_location.NoLocationSavedFragment"
+        tools:layout="@layout/fragment_no_location_saved" >
+        <action
+            android:id="@+id/action_noLocationSavedFragment_to_noLocationFragment"
+            app:destination="@id/noLocationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/noLocationSavedFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_noLocationSavedFragment_to_currentWeatherFragment"
+            app:destination="@id/currentWeatherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/noLocationSavedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/noLocationFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.no_location.NoLocationFragment"
+        tools:layout="@layout/fragment_no_location" >
+        <action
+            android:id="@+id/action_noLocationFragment_to_currentWeatherFragment"
+            app:destination="@id/currentWeatherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/noLocationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentWeatherFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.current_weather.CurrentWeatherFragment"
+        tools:layout="@layout/fragment_current_weather" >
+        <action
+            android:id="@+id/action_currentWeatherFragment_to_noLocationSavedFragment"
+            app:destination="@id/noLocationSavedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/currentWeatherFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_currentWeatherFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/currentWeatherFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_currentWeatherFragment_to_noInternetConnectionFragment"
+            app:destination="@id/noInternetConnectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/currentWeatherFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.error.ErrorFragment"
+        tools:layout="@layout/fragment_error" >
+        <argument
+            android:name="errorMessage"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue='"Unexpected error occured"' />
+    </fragment>
+    <fragment
+        android:id="@+id/noInternetConnectionFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.no_internet_connection.NoInternetConnectionFragment"
+        tools:layout="@layout/fragment_no_internet_connection" />
+    <fragment
+        android:id="@+id/dailyWeatherFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.daily_weather.DailyWeatherFragment"
+        tools:layout="@layout/fragment_daily_weather" >
+        <action
+            android:id="@+id/action_dailyWeatherFragment_to_noInternetConnectionFragment"
+            app:destination="@id/noInternetConnectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dailyWeatherFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dailyWeatherFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dailyWeatherFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dailyWeatherFragment_to_dailyDetailsWeatherFragment"
+            app:destination="@id/dailyDetailsWeatherFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dailyWeatherFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/dailyDetailsWeatherFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.daily_details_weather.DailyDetailsWeatherFragment">
+        <argument
+            android:name="dayId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_dailyDetailsWeatherFragment_to_noInternetConnectionFragment"
+            app:destination="@id/noInternetConnectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dailyDetailsWeatherFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dailyDetailsWeatherFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/dailyDetailsWeatherFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationCheckFragment"
+        android:name="hr.dice.damir_stipancic.weatherapp.ui.location_check.LocationCheckFragment">
+        <action
+            android:id="@+id/action_locationCheckFragment_to_currentWeatherFragment"
+            app:destination="@id/currentWeatherFragment"
+            app:popUpTo="@id/locationCheckFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_locationCheckFragment_to_noLocationSavedFragment"
+            app:destination="@id/noLocationSavedFragment"
+            app:popUpTo="@id/locationCheckFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

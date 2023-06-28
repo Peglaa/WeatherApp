@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="headerModel"
+            type="hr.dice.damir_stipancic.weatherapp.data.DailyDetails.DailyDetailsHeader" />
+    </data>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/daily_details_header_text_margin"
+        android:layout_marginTop="@dimen/daily_details_header_text_margin"
+        android:textSize="@dimen/daily_details_header_text_size"
+        style="@style/BaseText"
+        android:text="@{headerModel.titleId}"
+        tools:text="Temperatura">
+
+    </TextView>
+
+</layout>

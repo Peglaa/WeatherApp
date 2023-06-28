@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="currentWeather"
+            type="hr.dice.damir_stipancic.weatherapp.data.remote.weather_models.CurrentWeather" />
+
+        <variable
+            name="preferences"
+            type="hr.dice.damir_stipancic.weatherapp.data.preferences.UserPreferences" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.current_weather.CurrentWeatherFragment"
+        style="@style/screenBackground">
+
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/image_margin_bottom"
+            android:contentDescription="@string/current_weather"
+            app:layout_constraintBottom_toTopOf="@+id/tv_weather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_15"
+            app:weatherImage="@{currentWeather.weather[0].icon}"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BaseProgressBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_weather"
+            style="@style/BaseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            app:weather="@{currentWeather.weather[0].description}"
+            android:textSize="@dimen/current_weather_description_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Kiša" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <TextView
+            android:id="@+id/tv_temperature"
+            style="@style/BaseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/current_weather_temp_margins"
+            android:gravity="center"
+            android:textSize="@dimen/current_weather_temp_text_size"
+            android:textStyle="bold"
+            app:currentTemp="@{currentWeather.main.temp}"
+            app:currentTempIdentifier="@{preferences.units.tempIdentifier}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_weather" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/card_margin_horizontal"
+            android:layout_marginBottom="@dimen/card_margin_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/CurrentWeatherCardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/card_padding"
+                android:paddingVertical="@dimen/card_padding"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_temperature">
+
+                <TextView
+                    android:id="@+id/tv_humidity"
+                    style="@style/BaseText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/current_weather_card_value_text_size"
+                    android:textStyle="bold"
+                    app:currentHumidity="@{currentWeather.main.humidity}"
+                    app:layout_constraintBottom_toTopOf="@+id/textView8"
+                    app:layout_constraintEnd_toStartOf="@+id/materialDivider4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread"
+                    tools:text="58%" />
+
+                <TextView
+                    android:id="@+id/tv_pressure"
+                    style="@style/BaseText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/current_weather_card_value_text_size"
+                    android:textStyle="bold"
+                    app:currentPressure="@{currentWeather.main.pressure}"
+                    app:layout_constraintBottom_toTopOf="@+id/textView9"
+                    app:layout_constraintEnd_toStartOf="@+id/materialDivider5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/materialDivider4"
+                    tools:text="1009 hPa" />
+
+                <TextView
+                    android:id="@+id/tv_wind"
+                    style="@style/BaseText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/current_weather_card_value_text_size"
+                    android:textStyle="bold"
+                    app:currentWind="@{currentWeather.wind.speed}"
+                    app:currentSpeedIdentifier="@{preferences}"
+                    app:layout_constraintBottom_toTopOf="@+id/textView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/materialDivider5"
+                    tools:text="25 km/h" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/materialDivider4"
+                    style="@style/BaseDivider"
+                    android:layout_width="@dimen/divider_width"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/divider_margin"
+                    android:paddingVertical="@dimen/divider_padding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_pressure"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_humidity"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/materialDivider5"
+                    style="@style/BaseDivider"
+                    android:layout_width="@dimen/divider_width"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/divider_margin"
+                    android:paddingVertical="@dimen/divider_padding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_wind"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_pressure"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/BaseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/current_weather_card_title_text_margin"
+                    android:text="@string/humidity"
+                    android:textSize="@dimen/current_weather_card_title_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_humidity"
+                    app:layout_constraintStart_toStartOf="@+id/tv_humidity" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/BaseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/current_weather_card_title_text_margin"
+                    android:text="@string/pressure"
+                    android:textSize="@dimen/current_weather_card_title_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_pressure"
+                    app:layout_constraintStart_toStartOf="@+id/tv_pressure" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/BaseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/current_weather_card_title_text_margin"
+                    android:text="@string/wind"
+                    android:textSize="@dimen/current_weather_card_title_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_wind"
+                    app:layout_constraintStart_toStartOf="@+id/tv_wind" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
