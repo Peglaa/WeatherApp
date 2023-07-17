@@ -1,5 +1,5 @@
 # WeatherApp
-Android weather app that shows the user todays weather, as well as up to 7 days, in a simple and concise manner. Users can also lookup more details for the day they are interested in. The app supports localization, theme and different SI units, as well as dynamic control over how many days in advance the weather should be shown for, 3-7.
+Android weather app that shows the user today's weather, as well as up to 7 days, in a simple and concise manner. Users can also lookup more details for the day they are interested in. The app supports localization, theme and different SI units, as well as dynamic control over how many days in advance the weather should be shown for, 3-7.
 App is built with Kotlin and XML views with data binding.
   1. Kotlin
   2. MVVM

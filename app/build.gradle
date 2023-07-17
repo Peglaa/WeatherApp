@@ -1,9 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'org.jlleitschuh.gradle.ktlint' version '11.3.1'
+    id 'org.jlleitschuh.gradle.ktlint' version '11.5.0'
     id 'kotlin-kapt'
-    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.21'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.22'
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -32,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
     }
 
     buildFeatures {
@@ -67,7 +67,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
 
     //Koin
-    def koin_version = "3.3.0"
+    def koin_version = "3.4.2"
     implementation "io.insert-koin:koin-android:$koin_version"
 
     //Retrofit
@@ -75,20 +75,20 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
     //OkHttp
-    def okhttp_version = "4.10.0"
+    def okhttp_version = "4.11.0"
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
 
     //Json converter
-    def json_converter_version = "0.8.0"
+    def json_converter_version = "1.0.0"
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$json_converter_version"
 
     //Serialization
-    def serialization_version = "1.4.1"
+    def serialization_version = "1.5.1"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version"
 
     //Coil
-    def coil_version = "2.2.2"
+    def coil_version = "2.4.0"
     implementation "io.coil-kt:coil:$coil_version"
 
     //View Pager indicator
